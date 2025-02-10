@@ -30,18 +30,18 @@ void loop() {
   //Ciclo for para encender 5 leds y esperar 200 ms
   for (int i = 0; i < 5; i++) {
     digitalWrite(leds[i], HIGH);
-    delay(100);
+    delay(20);
     digitalWrite(leds[i], LOW);
-    delay(100);
+    delay(20);
   }
   delay(200);
 
   //Ciclo for para apagar 5 leds y esperar 200 ms
   for (int i = 4; i >= 0; i--) {
     digitalWrite(leds[i], HIGH);
-    delay(100);
+    delay(20);
     digitalWrite(leds[i], LOW);
-    delay(100);
+    delay(20);
   }
   delay(200);
 }
