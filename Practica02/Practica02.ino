@@ -4,9 +4,9 @@
  *Licenciatura en Ciencias de la Computación
  *Seminario de Ciencias de la Computación A: Introducción al Internet de las Cosas
  *
- *Escrito por: M. en I. Valente Vázquez Velázquez
- *Última modificación: 1-enero-2023
- *https://sites.google.com/ciencias.unam.mx/introduccion-iot-fc/inicio
+ *Escrito por: 
+ *  Delgado Díaz Hermes Alberto
+ *  López Montúfar José Eleazar
 */
 
 //Defino pines 

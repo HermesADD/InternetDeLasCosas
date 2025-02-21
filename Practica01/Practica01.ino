@@ -4,9 +4,9 @@
  *Licenciatura en Ciencias de la Computación
  *Seminario de Ciencias de la Computación A: Introducción al Internet de las Cosas
  *
- *Escrito por: M. en I. Valente Vázquez Velázquez
- *Última modificación: 1-enero-2023
- *https://sites.google.com/ciencias.unam.mx/introduccion-iot-fc/inicio
+ *Escrito por: 
+ *  Delgado Díaz Hermes Alberto
+ *  López Montúfar José Eleazar
 */
 
 //Defino pines (macro)
@@ -21,9 +21,11 @@ void setup() {
 void loop() {
   //Enciendo dos leds durante 200 ms
   digitalWrite(LED1, 1);
-  delay(12);
+  delay(11);
 
   //Apago dos leds durante 200 ms
   digitalWrite(LED1, LOW);
-  delay(12);
+  delay(11);
 }
+//Período total: 11ms + 11ms = 22ms = 0.022s
+//Frecuencia: 1/0.022 = 45.45Hz
