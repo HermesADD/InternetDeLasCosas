@@ -15,10 +15,10 @@
 #define PinADCDAC 12
 
 //Variables para definir el PWM
-const int freq = 5000; //Frecuencia en Hz
+const int freq = 10000; //Frecuencia en Hz
 const int ChanelPWM = 0; //Canal 0 - 15
 const int resolution = 8; //Bits de resolución, hasta 8
-const float dacEscala = 4.5;
+const float dacEscala = 7.0;
 
 void setup() {
   Serial.begin(115200);
