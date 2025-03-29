@@ -37,7 +37,7 @@ void loop() {
   for (int i = 0; i < 360; i++) {
     // Usar la misma función para ambos LEDs
     float seno2 = (127*sin(i * M_PI / 180)+127);
-    float umbral = 2.085 /3.3*255;
+    float umbral = 2.1 /3.3*255;
     float senodac = seno2*((255 - umbral)/ 255)+umbral;
 
     
@@ -50,6 +50,6 @@ void loop() {
     Serial.print(", PWM: ");
     Serial.println(analogRead(PinADCPWM));
     
-    delayMicroseconds(5000);
+    delayMicroseconds(10000);
   }
 }
