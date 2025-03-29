@@ -72,9 +72,16 @@ void loop() {
   }
 
   if(BT.available()){
-    char entrada = BT.read();
-    funcionLeds(entrada);
+    String entrada = BT.readStringUntil('\n');
+    entrada.trim(); // Elimina espacios y \r
+
+    if (entrada.length() == 1) {
+      funcionLeds(entrada.charAt(0));
+    } else {
+      BT.println("Comando no identificado. Usa 1-5 para LEDS y 0 para apagar todos.");
+    }
   }
+  
 }
 
 void funcionLeds(char entrada){
