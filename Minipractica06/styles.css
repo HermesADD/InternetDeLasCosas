@@ -1,0 +1,149 @@
+/* General
+    Body: Propiedades para el documento visible
+*/
+
+/* Estilos generales para el cuerpo de la página */
+body {
+    font-family: 'Roboto', Arial, sans-serif; /* Fuente Roboto de Google Fonts, o Arial, o sans-serif */
+    background-color: #f0f8ff; /* Color de fondo azul claro */
+    margin: 0; /* Elimina los márgenes predeterminados del cuerpo del documento. */
+    padding: 20px; /* Elimina el relleno predeterminado del cuerpo del documento */
+    display: flex; /* Activa el modelo de caja flexible (Flexbox) para el cuerpo del documento */
+    justify-content: center; /* Alinea los elementos hijos horizontalmente en el centro del cuerpo */
+    align-items: center; /* Alinea los elementos hijos verticalmente en el centro del cuerpo */
+    min-height: 100dvh; /* Altura completa de la ventana */
+    transition: background-color 0.5s ease; /* Transición suave para el cambio de color de fondo */
+}
+
+/* . (punto) - Selector de clase
+    El punto se utiliza para seleccionar elementos HTML que tienen un atributo class específico.
+    Las clases son reutilizables, lo que significa que varios elementos pueden compartir la misma clase.
+    En el CSS, se referencia una clase anteponiendo un punto (.) al nombre de la clase.
+*/
+
+/* Contenedor principal */
+.container {
+    width: 80%;
+    max-width: 900px;
+    margin: 20px auto;
+    text-align: center; /* Centrar el contenido */
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 20px; /* Elimina el relleno predeterminado del cuerpo del documento */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    min-height: fit-content;
+    min-width: fit-content;
+}
+
+/* Estilo para la imagen del cachorro */
+.container-image {
+    width: 200px; /* Ancho de la imagen */
+    height: auto; /* Altura automática para mantener la proporción */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-bottom: 20px; /* Espacio debajo de la imagen */
+}
+
+/* Estilo para el nombre del cachorro */
+.container-name {
+    color: #333; /* Color del texto */
+    font-size: 24px; /* Tamaño de la fuente */
+    margin: 20px 0; /* Espacio alrededor del nombre */
+}
+
+/* Estilo para el texto descriptivo */
+.container-description {
+    color: #555; /* Color del texto */
+    font-size: 16px; /* Tamaño de la fuente */
+    line-height: 1.5; /* Espaciado entre líneas */
+    max-width: 400px; /* Ancho máximo del texto */
+    margin: 0 auto 20px; /* Centrar y agregar espacio debajo */
+}
+
+
+/* # (almohadilla) - Selector de ID
+    El símbolo # se utiliza para seleccionar un elemento HTML que tiene un atributo id específico.
+    A diferencia de las clases, los IDs son únicos, lo que significa que solo un elemento en la página puede tener un ID específico.
+    En el CSS, se referencia un ID anteponiendo una almohadilla (#) al nombre del ID.
+*/
+
+/* Estilo para el texto único*/
+#dog-text {
+    color: #8d43ba; /* Color del texto */
+    font-size: 16px; /* Tamaño de la fuente */
+    max-width: 400px; /* Ancho máximo del texto */
+    margin: 0 auto 50px; /* Centrar y agregar espacio debajo */
+}
+
+#cat-text {
+    color: #160f93; /* Color del texto */
+    font-size: 20px; /* Tamaño de la fuente */
+    max-width: 400px; /* Ancho máximo del texto */
+    margin: 0 auto 50px; /* Centrar y agregar espacio debajo */
+}
+
+/* Estilo para los íconos adicionales */
+#dog-icons {
+    font-size: 24px; /* Tamaño de los íconos */
+    color: #ff6f61; /* Color de los íconos */
+    margin-top: 10px; /* Espacio arriba de los íconos */
+}
+
+#dog-icons i {
+    margin: 0 5px; /* Espacio entre íconos */
+}
+
+#cat-icons {
+    font-size: 24px; /* Tamaño de los íconos */
+    color: #4a201c; /* Color de los íconos */
+    margin-top: 10px; /* Espacio arriba de los íconos */
+}
+
+#cat-icons i {
+    margin: 0 5px; /* Espacio entre íconos */
+}
+
+.contenedor-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
+    gap: 20px; /* Espacio entre las imágenes */
+    width: auto;
+    max-width: 900px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor */
+    padding: 20px;
+    flex:1;
+    min-height: 1;
+}
+
+.imagen-mascota {
+    width: 100%; /* La imagen ocupará todo el espacio de su celda */
+    height: auto; /* Mantener la proporción de la imagen */
+    border-radius: 8px; /* Bordes redondeados opcionales */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+}
+
+/* Estilos para el contenedor del botón */
+.button-container {
+    width: 80%;
+    max-width: 900px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Estilos para el botón */
+#cambiarColorBtn {
+    background-color: #ffffff !important;
+    color: rgb(34, 34, 34) !important;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+#cambiarColorBtn:hover {
+    background-color: #ffffff !important;
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño del botón al pasar el mouse */
+}
+

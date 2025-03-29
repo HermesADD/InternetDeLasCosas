@@ -1,0 +1,117 @@
+<!DOCTYPE html> <!-- Tipo del documento -->
+<html lang="es"> <!-- Lenguaje del contenido -->
+
+<!-- Cabecera -->
+<!--
+    Sección esencial que contiene metadatos e información sobre el documento, 
+    pero no se muestra directamente en la página web. Su propósito principal 
+    es proporcionar detalles sobre el documento al navegador y a los motores 
+    de búsqueda, así como enlazar recursos externos como hojas de estilo, 
+    scripts y fuentes.
+-->
+<head>
+    <!-- Codificación de caracteres -->
+    <meta charset="UTF-8">
+
+    <!-- Ajusta la página a diferentes dispositivos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Descripción para motores de búsqueda -->
+    <meta name="description" content="Esta es una página presentando a nuestras mascotas.">
+
+    <!-- Autor de la página -->
+    <meta name="Vazzvel"> 
+
+    <!-- Título de la página -->
+    <title>Presentación de nuestras mascotas</title> 
+
+    <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Enlace a la fuente de Google Fonts (Roboto) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Enlace a FontAwesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+
+<!-- Cuerpo -->
+<!--
+    Contiene todo el contenido visible de la página web. Es donde se define la estructura y 
+    los elementos que los usuarios ven e interactúan en su navegador.
+-->
+<body>
+    <!-- Contenedor -->
+    <div class="container">
+
+        <!-- Título en el contenedor -->
+        <h1>¡Conoce a Bubu, la mascota de Hermes!</h1>
+        
+        <!-- Imagen del cachorro -->
+         <div class = "contenedor-grid">
+            <img src="images/bubu/bubu1.jpeg" alt="Foto de un Bubu" class="container-image">
+            <img src="images/bubu/bubu2.jpeg" alt="Foto de un Bubu" class="container-image">
+            <img src="images/bubu/bubu3.jpeg" alt="Foto de un Bubu" class="container-image">
+         </div>
+        
+        
+        <!-- Nombre del cachorro con un ícono -->
+        <h2 class="container-name">
+            <i class="fas fa-paw"></i> Bubu <i class="fas fa-paw"></i>
+        </h2>
+        
+        <!-- Texto descriptivo con la fuente Roboto -->
+        <p class="container-description">
+            Bubu es una Chihuahua adorable y llena de energía. Está por cumplir 5 años y, aunque es chiquita, tiene una gran personalidad. Es cariñosa, curiosa y muy leal, siempre lista para acurrucarse o explorar su entorno. 
+        </p>
+
+        <!-- Texto único -->
+        <p id="dog-text">
+            ¿Quieres acariciarla?
+        </p>
+        
+        <!-- Íconos adicionales -->
+        <div id="dog-icons">
+            <i class="fas fa-bone"></i>
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-smile"></i>
+        </div>
+    </div>
+
+<!-- Botón para cambiar color -->
+<div class="button-container">
+    <button id="cambiarColorBtn">Cambiar color de fondo</button>
+</div>
+
+    <div class="container">
+        <h1>¡Conoce a Van Gogh, la mascota de Eleazar!</h1>
+        <div class = "contenedor-grid">
+            <img src="images/vango/vango1.jpeg" alt="Foto de Van Gogh" class="container-image">
+            <img src="images/vango/vango2.jpeg" alt="Foto de Van Gogh" class="container-image">
+            <img src="images/vango/vango3.jpeg" alt="Foto de Van Gogh" class="container-image">
+        </div>
+
+        <h2 class="container-name">
+            <i class="fas fa-paw"></i> Van Gogh <i class="fas fa-paw"></i>
+        </h2>
+        
+        <p class="container-description">
+            Van Gogh es mi gato. Es un gato muy cariñoso y juguetón. Siempre está buscando atención y le encanta dar vueltas por toda mis casa. Aunque parezca dormilon, siempre esta lleno de energía para salir a pasear.
+        </p>
+
+        <p id="cat-text">
+            ¿Quieres darle un premio?
+        </p>
+        
+        <!-- Íconos adicionales -->
+        <div id="cat-icons">
+            <i class="fas fa-cat"></i>
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-smile"></i>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

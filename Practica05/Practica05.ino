@@ -16,7 +16,8 @@
 #define PinADCDAC 12
 
 //Variables para definir el PWM
-const int freq = 5000; //Frecuencia en Hz
+const int freq = 10000; //Frecuencia en Hz
+
 
 void setup() {
   Serial.begin(115200);
@@ -35,29 +36,19 @@ void setup() {
 void loop() {
   for (int i = 0; i < 360; i++) {
     // Usar la misma función para ambos LEDs
-    float seno = sin(i * M_PI / 180);
     float seno2 = (127*sin(i * M_PI / 180)+127);
+    float umbral = 2.085 /3.3*255;
+    float senodac = seno2*((255 - umbral)/ 255)+umbral;
 
-    // Escalar y centrar la señal para PWM (0-255)
-    int valorPWM = seno*125.4;
-
-    // Escalar y centrar la señal para DAC (0-255)
-    int valorDAC = seno2;
     
-    ledcWrite(PinPWM, valorPWM);
-    dacWrite(PinDAC, valorDAC);
+    ledcWrite(PinPWM, seno2);
+    dacWrite(PinDAC, senodac);
 
-    // Lectura de ADC y conversión a voltaje
-    float adcDAC = analogRead(PinADCDAC);
-    float adcPWM = analogRead(PinADCPWM);
-
-    float voltagedac = analogRead(PinADCDAC);
-    float voltagepwm = 3.3/4096 * analogRead(PinADCPWM);
     
     Serial.print("DAC: ");
-    Serial.print(voltagedac);
+    Serial.print(analogRead(PinADCDAC));
     Serial.print(", PWM: ");
-    Serial.println(voltagepwm);
+    Serial.println(analogRead(PinADCPWM));
     
     delayMicroseconds(5000);
   }
