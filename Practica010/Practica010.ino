@@ -7,6 +7,10 @@
  *Escrito por: 
  *  Delgado Díaz Hermes Alberto
  *  López Montúfar José Eleazar
+ *  
+ *  Bibliotecas arduinojson 6.15.2
+ *  Placa esp32 2.0
+ *  
 */
 
 #include "CTBot.h"
@@ -17,7 +21,7 @@ CTBot myBot;
 
 String ssid = "INFINITUM1822";
 String pass = "Sp5Ea8Kj1g";
-String token = "7774747868:AAF9FEHmi0WbI15VD9CodQ7EAuyJKQ3DOgM";
+String token = "8101015803:AAErLXVaaOiHQ8GFwfeAPhvfY8pfWeHk8A8";
 
 bool alarmaActivada = false;
 int umbral = 3000;
@@ -28,7 +32,7 @@ const unsigned long intervaloAlerta = 500;
 
 void setup(){
   Serial.begin(115200);
-  
+  delay(1000);
   Serial.print("Comenzando HE-Bot ...  ");
   
   pinMode(LDR, INPUT);  
@@ -39,6 +43,15 @@ void setup(){
   }
 
   myBot.wifiConnect(ssid, pass);
+  
+  Serial.print("Conectando al Wi-Fi...");
+  while (WiFi.status() != WL_CONNECTED) {
+  delay(500);
+  Serial.print(".");
+  }
+  Serial.println("\nConectado a la red Wi-Fi.");
+  Serial.println(WiFi.localIP());  // Muestra la IP local
+
   myBot.setTelegramToken(token);
 
   delay(2000);
@@ -54,6 +67,7 @@ void loop(){
   TBMessage msg;
 
   int valorLDR = analogRead(LDR);
+  float voltajeLDR = (valorLDR * 3.3)/4095;
   Serial.print("LDR: ");
   Serial.println(valorLDR);
 
@@ -81,7 +95,7 @@ void loop(){
     }
     //Comando /dato
     else if(comando == "/dato"){
-      myBot.sendMessage(msg.sender.id, "Valor de LDR: " + String(valorLDR));
+      myBot.sendMessage(msg.sender.id, "Valor de LDR: " + String(voltajeLDR));
     }
     //Comando /activar
     else if(comando == "/activar"){
@@ -95,7 +109,7 @@ void loop(){
     }
     //Comando /umbral
     else if(comando.startsWith("/umbral ")){
-      String valorStr = texto.substring(8);
+      String valorStr = comando.substring(8);
       int nuevoUmbral = valorStr.toInt();
       if (nuevoUmbral > 0 && nuevoUmbral < 4096) {
         umbral = nuevoUmbral;
@@ -125,7 +139,7 @@ void encenderSirena(){
     ultimaAlerta = tiempoActual;
     estadoAlerta = !estadoAlerta;
     for(int i = 0; i < 5; i++){
-      digitalWrite(leds[i],estadoAleta ? HIGH : LOW);
+      digitalWrite(leds[i],estadoAlerta ? HIGH : LOW);
     }
   }
 }
