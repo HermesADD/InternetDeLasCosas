@@ -10,6 +10,7 @@
  * 
  * Version de bibliotecas: 
  * Arduinojson: 6.19.4
+ * Placa 2.0.13
  * 
  * Descripción: Servidor web para control de 5 LEDs (3 digitales, 2 PWM) y monitoreo
  * de potenciómetro y fotoresistencia.
