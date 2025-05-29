@@ -4,11 +4,11 @@
  *Licenciatura en Ciencias de la Computación
  *Seminario de Ciencias de la Computación A: Introducción al Internet de las Cosas
  *
- *Escrito por: 
+ *  Escrito por: 
  *  Delgado Díaz Hermes Alberto
  *  López Montúfar José Eleazar
  *  
- *  Bibliotecas arduinojson 6.15.2
+ *  Bibliotecas arduinojson 6.19.4
  *  Placa esp32 2.0
  *  
 */

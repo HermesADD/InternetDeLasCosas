@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de LEDs y Sensores</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard">
+        <header>
+            <h1>Control de LEDs y Monitoreo de Sensores</h1>
+            <p class="subtitle">por: Eleazar Y Hermes </p>
+        </header>
+        
+        <div class="sensor-panel">
+            <h2>Monitoreo de Sensores</h2>
+            <div class="sensor-container">
+                <div class="sensor">
+                    <div class="sensor-icon">🎛️</div>
+                    <div class="sensor-info">
+                        <h3>Potenciómetro</h3>
+                        <div class="sensor-value" id="pot-value">0</div>
+                    </div>
+                </div>
+                <div class="sensor">
+                    <div class="sensor-icon">☀️</div>
+                    <div class="sensor-info">
+                        <h3>Fotoresistencia</h3>
+                        <div class="sensor-value" id="ldr-value">0</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="control-panel">
+            <h2>Control de LEDs</h2>
+            
+            <div class="led-switch-container">
+                <h3>LEDs Digitales</h3>
+                <div class="led-buttons">
+                    <div class="led-button" data-id="1">
+                        <div class="led-circle %LED1_STATE%"></div>
+                        <span>LED 1</span>
+                    </div>
+                    <div class="led-button" data-id="2">
+                        <div class="led-circle %LED2_STATE%"></div>
+                        <span>LED 2</span>
+                    </div>
+                    <div class="led-button" data-id="3">
+                        <div class="led-circle %LED3_STATE%"></div>
+                        <span>LED 3</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pwm-control-container">
+                <h3>LEDs PWM</h3>
+                <div class="pwm-control">
+                    <div class="pwm-slider">
+                        <label for="led4-slider">LED 4</label>
+                        <input type="range" id="led4-slider" min="0" max="255" value="%LED4_VALUE%" class="slider">
+                        <span class="slider-value" id="led4-value">%LED4_VALUE%</span>
+                    </div>
+                    <div class="pwm-slider">
+                        <label for="led5-slider">LED 5</label>
+                        <input type="range" id="led5-slider" min="0" max="255" value="%LED5_VALUE%" class="slider">
+                        <span class="slider-value" id="led5-value">%LED5_VALUE%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
