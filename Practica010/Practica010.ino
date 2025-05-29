@@ -9,7 +9,7 @@
  *  López Montúfar José Eleazar
  *  
  *  Bibliotecas arduinojson 6.19.4
- *  Placa esp32 2.0
+ *  Placa esp32 2.0.13
  *  
 */
 
@@ -73,6 +73,9 @@ void loop(){
 
   if(alarmaActivada && valorLDR > umbral){
     encenderSirena();
+    if(estadoAlerta == true){
+         myBot.sendMessage(msg.sender.id, "Alarma encendida, estas en el limite del umbral, CUIDADO");
+      }
   }else{
     apagarSirena();
   }
